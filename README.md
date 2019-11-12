@@ -1,8 +1,8 @@
 # decay
 
 decay is an [open source](https://github.com/pyl1b/decay.git),
-MIT licensed library with utilities for python programs based on
-argparse, appdirs, configparser and using logging module
+MIT licensed library which groups code for managing changes in values 
+based on a predefined rule.
 
 
 [![Build Status](https://travis-ci.org/pyl1b/decay.svg?branch=master)](https://travis-ci.org/pyl1b/decay)
