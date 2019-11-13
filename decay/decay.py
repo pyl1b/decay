@@ -9,7 +9,6 @@ import logging
 
 from .item import DecayItem
 from .host import DecayHost
-from .kind import DecayType
 
 logger = logging.getLogger('Decay')
 

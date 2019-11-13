@@ -72,6 +72,4 @@ class LinearDecay(DecayType):
         # And, at this point, we compute the new strength.
         # Because this is linear and both go from 0 to 1
         # This is just a matter of reversing the value.
-
         return item.set_decay(tick, item.decay_strength - delta_t)
-

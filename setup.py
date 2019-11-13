@@ -22,9 +22,7 @@ VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'argparse',
-    'appdirs',
-    'configparser',
+    'numpy',
 ]
 
 # What packages are optional?
