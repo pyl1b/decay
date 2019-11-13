@@ -32,6 +32,5 @@ class DecayHost(object):
     def __init__(self, decay_type=None, decay_ticks_to_0=None, *args, **kwargs):
         """ Constructor. """
         super().__init__(*args, **kwargs)
-
         self.decay_type = decay_type
         self.decay_ticks_to_0 = decay_ticks_to_0

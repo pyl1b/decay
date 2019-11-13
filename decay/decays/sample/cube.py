@@ -25,7 +25,7 @@ class CubeDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(CubeDecay, self).__init__(
-            name='.decay.cube.', *args, **kwargs)
+            decay_name='.decay.cube.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

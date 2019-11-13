@@ -22,7 +22,7 @@ class ThreeSinesDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(ThreeSinesDecay, self).__init__(
-            name='.decay.three_sines.', *args, **kwargs)
+            decay_name='.decay.three_sines.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

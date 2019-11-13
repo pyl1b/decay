@@ -32,7 +32,7 @@ class SuddenDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(SuddenDecay, self).__init__(
-            name='.decay.sudden.', *args, **kwargs)
+            decay_name='.decay.sudden.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

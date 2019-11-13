@@ -31,7 +31,7 @@ class SigmoidDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(SigmoidDecay, self).__init__(
-            name='.decay.sigmoid.', *args, **kwargs)
+            decay_name='.decay.sigmoid.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

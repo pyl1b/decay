@@ -25,7 +25,7 @@ class SquareRootDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(SquareRootDecay, self).__init__(
-            name='.decay.sqrt.', *args, **kwargs)
+            decay_name='.decay.sqrt.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

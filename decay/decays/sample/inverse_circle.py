@@ -25,7 +25,7 @@ class InverseCircleDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(InverseCircleDecay, self).__init__(
-            name='.decay.inv_circle.', *args, **kwargs)
+            decay_name='.decay.inv_circle.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

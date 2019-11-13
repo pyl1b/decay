@@ -25,7 +25,7 @@ class InverseParabolaDecay(SampleBasedDecay):
     def __init__(self, *args, **kwargs):
         """ Constructor. """
         super(InverseParabolaDecay, self).__init__(
-            name='.decay.inv_parabola.', *args, **kwargs)
+            decay_name='.decay.inv_parabola.', *args, **kwargs)
 
     def __str__(self):
         """ Represent this object as a human-readable string. """

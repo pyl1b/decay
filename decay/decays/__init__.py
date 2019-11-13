@@ -15,7 +15,7 @@ from .sample.sudden import SuddenDecay
 from .sample.three_sine import ThreeSinesDecay
 
 
-mapper = dict((decay.name, decay) for decay in [
+mapper = dict((decay.decay_name, decay) for decay in [
     NoDecay(),
     LinearDecay(),
     CircleDecay(),
