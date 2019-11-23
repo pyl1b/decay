@@ -27,8 +27,8 @@ class TestDecayHost(TestCase):
     def test_init(self):
         self.testee = DecayHost()
         self.assertIsNone(self.testee.decay_type)
-        self.assertIsNone(self.testee.decay_ticks_to_0)
+        self.assertIsNone(self.testee.decay_tics_to_0)
 
         self.testee = DecayHost('type', 9)
         self.assertEqual(self.testee.decay_type, 'type')
-        self.assertEqual(self.testee.decay_ticks_to_0, 9)
+        self.assertEqual(self.testee.decay_tics_to_0, 9)

@@ -34,7 +34,7 @@ class LinearDecay(DecayType):
         """ Represent this object as a python constructor. """
         return 'LinearDecay()'
 
-    def update_decay(self, item, host, tick):
+    def update_decay(self, item, host, tic):
         """
         Change the value of the strength based on the time passed since th
         last update.
@@ -44,19 +44,19 @@ class LinearDecay(DecayType):
                 the item whose strength we're updating.
             host:
                 the way we should update the item.
-            tick:
+            tic:
                 time at which we should compute the strength.
 
         Returns:
             Computed strength
         """
         logger.log(1, "linear decay for item %s hosted in %s at time %r",
-                   item, host, tick)
+                   item, host, tic)
 
         # This is the time it has passed since last update (x).
         # We normalize it inside the 0.0 - 1.0 interval
-        delta_t = float(tick - item.decay_time) / \
-            host.decay_ticks_to_0
+        delta_t = float(tic - item.decay_time) / \
+            host.decay_tics_to_0
 
         # The y is the strength that should be between 0.0 and 1.0.
         # Based on it we compute the time (x) at that point.
@@ -72,4 +72,4 @@ class LinearDecay(DecayType):
         # And, at this point, we compute the new strength.
         # Because this is linear and both go from 0 to 1
         # This is just a matter of reversing the value.
-        return item.set_decay(tick, item.decay_strength - delta_t)
+        return item.set_decay(tic, item.decay_strength - delta_t)

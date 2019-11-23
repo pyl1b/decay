@@ -34,7 +34,7 @@ class NoDecay(DecayType):
         """ Represent this object as a python constructor. """
         return 'NoDecay()'
 
-    def update_decay(self, item, host, tick):
+    def update_decay(self, item, host, tic):
         """
         Change the value of the strength based on the time passed since th
         last update.
@@ -44,12 +44,12 @@ class NoDecay(DecayType):
                 the item whose strength we're updating.
             host:
                 the way we should update the item.
-            tick:
+            tic:
                 time at which we should compute the strength.
 
         Returns:
             Computed strength
         """
         logger.log(1, "no-op decay for item %s hosted in %s at time %r",
-                   item, host, tick)
+                   item, host, tic)
         return item.decay_strength

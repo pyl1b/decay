@@ -46,18 +46,18 @@ class TestDecayItem(TestCase):
 
     def test_set_decay(self):
 
-        self.testee.set_decay(new_tick=99, new_strength=0.0)
+        self.testee.set_decay(new_tic=99, new_strength=0.0)
         self.assertEqual(self.testee.decay_time, 99)
         self.assertEqual(self.testee.decay_strength, 0.0)
 
-        self.testee.set_decay(new_tick=99, new_strength=0.5)
+        self.testee.set_decay(new_tic=99, new_strength=0.5)
         self.assertEqual(self.testee.decay_time, 99)
         self.assertEqual(self.testee.decay_strength, 0.5)
 
-        self.testee.set_decay(new_tick=99, new_strength=1.5)
+        self.testee.set_decay(new_tic=99, new_strength=1.5)
         self.assertEqual(self.testee.decay_time, 99)
         self.assertEqual(self.testee.decay_strength, 1.0)
 
-        self.testee.set_decay(new_tick=99, new_strength=-1.5)
+        self.testee.set_decay(new_tic=99, new_strength=-1.5)
         self.assertEqual(self.testee.decay_time, 99)
         self.assertEqual(self.testee.decay_strength, 0.0)

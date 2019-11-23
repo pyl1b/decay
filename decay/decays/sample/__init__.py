@@ -97,7 +97,7 @@ class SampleBasedDecay(DecayType):
             )
             return y
 
-    def update_decay(self, item, host, tick):
+    def update_decay(self, item, host, tic):
         """
         Change the value of the strength based on the time passed since th
         last update.
@@ -107,19 +107,19 @@ class SampleBasedDecay(DecayType):
                 the item whose strength we're updating.
             host:
                 the way we should update the item.
-            tick:
+            tic:
                 time at which we should compute the strength.
 
         Returns:
             Computed strength
         """
         logger.log(1, "sample based decay for item %s hosted in %s at time %r",
-                   item, host, tick)
+                   item, host, tic)
 
         # This is the time it has passed since last update (x).
         # We normalize it inside the 0.0 - 1.0 interval
-        delta_t = float(tick - item.decay_time) / \
-            host.decay_ticks_to_0
+        delta_t = float(tic - item.decay_time) / \
+            host.decay_tics_to_0
 
         # The y is the strength that should be between 0.0 and 1.0.
         # Based on it we compute the time (x) at that point.
@@ -129,4 +129,4 @@ class SampleBasedDecay(DecayType):
         new_time = prev_time + delta_t
 
         # And, at this point, we compute the new strength.
-        return item.set_decay(tick, self.y_decay_for_x(new_time))
+        return item.set_decay(tic, self.y_decay_for_x(new_time))

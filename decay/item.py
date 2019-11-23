@@ -22,7 +22,6 @@ class DecayItem(object):
         decay_time (int):
             the last time a strength has been computed.
     """
-
     def __init__(self, decay_strength=1.0, decay_time=None, *args, **kwargs):
         """
         Constructor.
@@ -51,12 +50,12 @@ class DecayItem(object):
         return 'DecayItem(%r, %r)' % (
                 self.decay_strength, self.decay_time)
 
-    def set_decay(self, new_tick, new_strength):
+    def set_decay(self, new_tic, new_strength):
         """ Changes the value of the strength. """
         if new_strength < STRENGTH_SMALL_ENOUGH_TO_BE_0:
             new_strength = 0.0
         elif new_strength > 1.0:
             new_strength = 1.0
-        self.decay_time = new_tick
+        self.decay_time = new_tic
         self.decay_strength = new_strength
         return self.decay_strength

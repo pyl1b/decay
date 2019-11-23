@@ -20,7 +20,6 @@ class DecayType(object):
     Attributes:
         decay_name (str):
             a unique name for this type of decay
-
     """
 
     def __init__(self, decay_name, *args, **kwargs):
@@ -30,7 +29,6 @@ class DecayType(object):
         Arguments:
             decay_name (str):
                 a unique name for this type of decay
-
         """
         super().__init__(*args, **kwargs)
         self.decay_name = decay_name
@@ -43,7 +41,7 @@ class DecayType(object):
         """ Represent this object as a python constructor. """
         raise NotImplementedError
 
-    def update_decay(self, item, host, tick):
+    def update_decay(self, item, host, tic):
         """
         Change the value of the strength based on the time passed since th
         last update.
@@ -53,7 +51,7 @@ class DecayType(object):
                 the item whose strength we're updating.
             host:
                 the way we should update the item.
-            tick:
+            tic:
                 time at which we should compute the strength.
 
         Returns:
