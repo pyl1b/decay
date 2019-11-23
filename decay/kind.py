@@ -43,7 +43,7 @@ class DecayType(object):
 
     def update_decay(self, item, host, tic):
         """
-        Change the value of the strength based on the time passed since th
+        Change the value of the strength based on the time passed since the
         last update.
 
         Args:

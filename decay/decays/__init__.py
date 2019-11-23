@@ -13,19 +13,3 @@ from .sample.sigmoid import SigmoidDecay
 from .sample.square_root import SquareRootDecay
 from .sample.sudden import SuddenDecay
 from .sample.three_sine import ThreeSinesDecay
-
-
-mapper = dict((decay.decay_name, decay) for decay in [
-    NoDecay(),
-    LinearDecay(),
-    CircleDecay(),
-    CubeDecay(),
-    HalfSuddenDecay(),
-    InverseCircleDecay(),
-    InverseParabolaDecay(),
-    ParabolaDecay(),
-    SigmoidDecay(),
-    SquareRootDecay(),
-    SuddenDecay(),
-    ThreeSinesDecay(),
-])
