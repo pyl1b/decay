@@ -30,16 +30,18 @@ class Registry(object):
 
         self.id_to_type = {}
         self.name_to_type = {}
+        self.name_to_id = {}
 
         self._lib_init()
 
     @staticmethod
-    def instance(self):
+    def instance():
         return registry
 
     def add_type(self, kind, numeric_id):
         self.id_to_type[numeric_id] = kind
         self.name_to_type[kind.decay_name] = kind
+        self.name_to_id[kind.decay_name] = numeric_id
 
     def remove_type(self, kind, numeric_id):
         del self.id_to_type[numeric_id]

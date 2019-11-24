@@ -58,3 +58,9 @@ class DecayType(object):
             Computed strength
         """
         raise NotImplementedError
+
+    @property
+    def decay_type_id(self):
+        """ Returns a numeric id of this type. """
+        from .registry import Registry
+        return Registry.instance().name_to_id[self.decay_name]

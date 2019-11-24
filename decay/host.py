@@ -34,3 +34,8 @@ class DecayHost(object):
         super().__init__(*args, **kwargs)
         self.decay_type = decay_type
         self.decay_tics_to_0 = decay_tics_to_0
+
+    @property
+    def decay_type_id(self):
+        """ Returns a numeric id of the type. """
+        return self.decay_type.decay_type_id
