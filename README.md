@@ -2,7 +2,7 @@
 
 decay is an [open source](https://github.com/pyl1b/decay.git),
 MIT licensed library which groups code for managing changes in values 
-based on a predefined rule.
+based on a predefined rule over time.
 
 
 [![Build Status](https://travis-ci.org/pyl1b/decay.svg?branch=master)](https://travis-ci.org/pyl1b/decay)
